@@ -14,5 +14,5 @@ export default Service.extend({
 
     remove(user) {
         this.get('users').removeObject(user);
-    }
+    },
 });
