@@ -1,0 +1,15 @@
+<h1>Welcome to login</h1>
+
+<div>    
+    <p id = "error"></p>
+</div>
+<div>
+    <label>Username</label>
+    {{input value=username }}
+</div>
+<div>
+    <label>Password</label>
+    {{input id="password" value=password type="password"}}
+</div>
+<button {{action 'login'}}>Login</button>
+{{outlet}}
