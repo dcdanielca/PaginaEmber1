@@ -1,1 +1,25 @@
+{{link-to 'Calculator' 'calculator'}}
+{{link-to 'Register user' 'register'}}
+{{link-to 'List users' 'list-users'}}
+
+<div>
+    <p id='error'></p>
+</div>
+
+
+<label>Number1</label>
+{{input type='number' value=number1}}
+<br>
+<label>Number2</label>
+{{input type='number' value=number2}}
+
+<br>
+<button {{action 'add'}}>Add</button>
+<button {{action 'subtract'}}>Subtract</button>
+<br>
+
+<div>
+    <label>Result:</label>
+    <p id='result'></p>
+</div>
 {{outlet}}
