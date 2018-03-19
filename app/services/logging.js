@@ -4,12 +4,12 @@ export default Service.extend({
     users: null,
 
     init() {
+        this._super(...arguments);
         this.set('users', []);
     },
 
     add(user) {
         this.get('users').pushObject(user);
-        console.log(this.get('users'));
     },
 
     remove(user) {

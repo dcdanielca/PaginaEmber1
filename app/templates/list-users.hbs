@@ -1,4 +1,18 @@
 {{link-to 'Calculator' 'calculator'}}
 {{link-to 'Register user' 'register'}}
 {{link-to 'List users' 'list-users'}}
+<table>
+<tr>
+  <td><strong>Name</strong></td>
+  <td><strong>Sex</strong></td>
+  <td><strong>Salary</strong></td>
+</tr>
+{{#each registering.people as |person|}}
+    <tr>
+        <td>{{person.name}}</td>
+        <td>{{person.gender}}</td>
+        <td>{{person.salary}}</td>
+    </tr>
+{{/each}}
+</table>
 {{outlet}}  

@@ -1,4 +1,20 @@
-{{link-to 'Calculator' 'calculator'}}
-{{link-to 'Register user' 'register'}}
+{{link-to 'Calculator' 'calculator'}} 
+{{link-to 'Register user' 'register'}} 
 {{link-to 'List users' 'list-users'}}
+<div>
+    <p id='error'></p>
+    <p id='message'></p>
+</div>
+<div>
+    Name {{input type='text' id='name' value=name}} 
+    <br>
+    Salary {{input type='number' id='salary' value=salary}}
+    <br>
+    Gender <select onchange={{action 'setGender' value='target.value'}}>
+        <option value='female'>Female</option>
+        <option value='male'>Male</option>
+    </select>
+</div>
+<button {{action 'register'}}>Register</button>
+
 {{outlet}}

@@ -11,7 +11,7 @@ export default Controller.extend({
             } else {
                 var result = parseInt(number1) + parseInt(number2);
                 document.getElementById('error').innerHTML = '';
-                document.getElementById('result').innerHTML = result;
+                document.getElementById('message').innerHTML = result;
             }
         },
         subtract() {
@@ -23,7 +23,7 @@ export default Controller.extend({
             } else {
                 var result = parseInt(number1) - parseInt(number2);
                 document.getElementById('error').innerHTML = '';
-                document.getElementById('result').innerHTML = result;
+                document.getElementById('message').innerHTML = result;
             }
         }
     }
