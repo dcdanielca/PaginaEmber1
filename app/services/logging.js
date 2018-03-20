@@ -1,18 +1,17 @@
 import Service from '@ember/service';
+import { storageFor } from 'ember-local-storage';
 
 export default Service.extend({
-    users: null,
-
+    users: storageFor('users'),
     init() {
         this._super(...arguments);
-        this.set('users', []);
     },
 
     add(user) {
-        this.get('users').pushObject(user);
+        this.get('users').addObject(user);
     },
 
-    remove(user) {
-        this.get('users').removeObject(user);
+    remove() {
+        this.get('users').clear();
     },
 });

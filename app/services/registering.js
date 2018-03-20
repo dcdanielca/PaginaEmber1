@@ -1,14 +1,14 @@
 import Service from '@ember/service';
+import { storageFor } from 'ember-local-storage';
 
 export default Service.extend({
-    people: null,
+    people: storageFor('people'),
 
     init() {
         this._super(...arguments);
-        this.set('people', []);
     },
 
     add(person) {
-        this.get('people').pushObject(person);
+        this.get('people').addObject(person);
     },
 });

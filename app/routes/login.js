@@ -4,7 +4,9 @@ import { inject as service } from '@ember/service';
 export default Route.extend({
     logging: service(),
     beforeModel() {
-        if(this.get('logging').users.length > 0){
+        const lengthStorage = (this.get('logging')).get('users.length');
+
+        if(lengthStorage > 0){
             this.transitionTo('home');
         } 
     },
